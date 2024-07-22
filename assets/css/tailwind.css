@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.button {
+  @apply bg-primary text-white p-2 px-4 font-semibold flex items-center rounded;
+}
+.button-border {
+  @apply border-2 border-primary p-2 px-4 text-primary rounded font-semibold duration-300;
+}
+.button-border:hover {
+  @apply bg-[#ffebe9];
+}
+.button-secondary {
+  @apply bg-black w-full justify-center text-white p-2 px-4 font-semibold flex items-center rounded;
+}
+.button-arrows {
+  text-underline-position: under;
+  @apply text-black font-semibold flex items-center rounded text-xl gap-2 underline cursor-pointer;
+}
+
+header {
+  @apply py-5 px-10;
+}
+header nav {
+  @apply flex justify-between items-center;
+}
+header nav .navbar-collapse {
+  @apply flex gap-4 items-center;
+}
+header nav .navbar-collapse .navbar-item {
+  @apply text-base font-semibold flex gap-2 items-center;
+}
+
+footer {
+  @apply bg-primary w-full pt-20 pb-24 relative;
+}
+footer .footer-item {
+  @apply col-span-3;
+}
+footer .footer-item h4 {
+  @apply text-white font-bold text-xl mb-4;
+}
+footer .footer-item .footer-text {
+  @apply text-white font-semibold text-sm w-fit;
+}
+footer .footer-item .footer-text-link {
+  @apply underline;
+}
+footer .footer-item .footer-icon {
+  @apply flex gap-2 mt-4;
+}
+
+h1 {
+  @apply text-5xl font-bold;
+}
+
+h2 {
+  @apply text-4xl font-bold;
+}
+h2 .lighter_text {
+  @apply relative;
+  z-index: 55;
+}
+h2 .lighter_text .lighter {
+  background: #ffe400;
+  bottom: 5px;
+  @apply absolute w-[100%] h-4 -z-10 left-0;
+}
+
+section {
+  @apply mt-110;
+}
+
+.card {
+  @apply col-span-3 bg-[#f3f6f8] border-[#d9e0e6] border border-s p-8 rounded-xl;
+}
+.card .card-img {
+  @apply h-[150px] w-full object-cover mb-4 rounded-md;
+}
+.card .card-text {
+  @apply flex flex-col gap-1 mb-4;
+}
+.card .card-text .card-title {
+  @apply text-2xl font-bold;
+}
+.card .card-text .card-subtitle {
+  @apply text-text;
+}
+.card .card-list {
+  @apply flex flex-col gap-2 font-semibold;
+}
+.card .card-list > li {
+  @apply flex gap-2;
+}
+
+.avis {
+  width: 346px;
+  @apply bg-[#f3f6f8] border-[#d9e0e6] border border-s p-8 rounded-xl;
+}
+.avis .avis-header {
+  @apply flex gap-4 items-center;
+}
+.avis .avis-header h3 {
+  @apply font-bold;
+}
+.avis .avis-content {
+  @apply mt-4;
+}
+
+.pay {
+  @apply bg-white border-gray-200 border border-solid w-full max-w-[500px] rounded-xl p-8 flex flex-col;
+}
+.pay h3 {
+  @apply text-2xl font-bold mt-4;
+}
+.pay p {
+  @apply mt-2 mb-6 text-text;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+.st0 {
+  fill: #E52621;
+}
+
+.st1 {
+  fill: #E52629;
+}
+
+.st2 {
+  fill: #26367A;
+}
+
+.st3 {
+  fill: #30358C;
+}
+
+.st4 {
+  fill: #E52621;
+  stroke: #008E39;
+  stroke-miterlimit: 10;
+}
+
+.st5 {
+  fill: #FFFFFF;
+}
+
+.st6 {
+  fill: #020203;
+}
+
+.st7 {
+  fill: #EEECEC;
+}
+
+.st8 {
+  fill: #AEBBC0;
+}
+
+.st9 {
+  fill: #B7C2C8;
+}
+
+.st10 {
+  fill: #C1D0D8;
+}
+
+.st11 {
+  fill: #9CAAAE;
+}
+
+.st12 {
+  fill: #8A99A2;
+}
+
+.st13 {
+  fill: #C4D4DE;
+}
+
+.st14 {
+  fill: #444B55;
+}
+
+.st15 {
+  fill: #A6BDC8;
+}
+
+.st16 {
+  fill: #2D3235;
+}
+
+.st17 {
+  fill: #2C2E31;
+}
+
+.st18 {
+  fill: #253786;
+}
+
+.st19 {
+  fill: #E52521;
+}
+
+.st20 {
+  fill: #BE1622;
+}
+
+.st21 {
+  fill: url(#SVGID_1_);
+}
+
+.st22 {
+  opacity: 0.24;
+}
+
+.st23 {
+  fill: #878787;
+}
+
+.st24 {
+  fill: #E71D73;
+}
+
+.st25 {
+  fill: url(#SVGID_2_);
+}
+
+.st27 {
+  font-size: 26.6739px;
+}
+
+/*# sourceMappingURL=tailwind.css.map */
