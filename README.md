@@ -1,10 +1,7 @@
-# Nuxt 3 Minimal Starter
+# RevyFormation
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Mettre en place le projet
 
-## Setup
-
-Make sure to install the dependencies:
 
 ```bash
 # npm
@@ -20,9 +17,7 @@ yarn install
 bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Démarrer le serveur de développement
 
 ```bash
 # npm
@@ -38,38 +33,12 @@ yarn dev
 bun run dev
 ```
 
-## Production
+## Langages utilisés
 
-Build the application for production:
+![Lang](https://skillicons.dev/icons?i=vue,nuxt,typescript)
 
-```bash
-# npm
-npm run build
 
-# pnpm
-pnpm run build
+## Auteur
 
-# yarn
-yarn build
+Développé par [Karibsen Studi*](https://karibsen.fr)
 
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
