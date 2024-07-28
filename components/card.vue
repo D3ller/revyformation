@@ -15,7 +15,11 @@ defineProps({
   list: {
     type: Array,
     required: false,
-  }
+  },
+  to: {
+    type: String,
+    required: false,
+  },
 })
 </script>
 
@@ -33,7 +37,7 @@ defineProps({
     </ul>
 
     <div class="mt-5">
-      <buttons :type="'secondary'">En savoir plus +</buttons>
+      <buttons :to="to" :type="'secondary'">En savoir plus +</buttons>
     </div>
   </div>
 </template>

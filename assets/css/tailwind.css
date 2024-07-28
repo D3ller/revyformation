@@ -2,6 +2,117 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+header {
+  @apply py-5 lg:px-10 px-5;
+}
+header nav {
+  @apply flex justify-between items-center;
+}
+header nav .navbar-collapse {
+  @apply flex gap-4 items-center;
+}
+@media screen and (max-width: 900px) {
+  header nav .navbar-collapse {
+    @apply hidden;
+  }
+}
+header nav .navbar-collapse .navbar-item {
+  @apply text-base font-semibold flex gap-2 items-center;
+}
+header nav .navbar-collapse-mobile {
+  @apply flex gap-4 items-center;
+}
+@media screen and (min-width: 900px) {
+  header nav .navbar-collapse-mobile {
+    @apply hidden;
+  }
+}
+header nav .navbar-collapse-mobile .burger {
+  @apply cursor-pointer flex flex-col gap-1 p-2.5 border-tertial-grey-border border rounded transition-all duration-300;
+}
+header nav .navbar-collapse-mobile .burger:focus {
+  @apply border-primary shadow-rounded;
+}
+header nav .navbar-collapse-mobile .burger span {
+  @apply block h-0.5 w-4 bg-slate-900 rounded-full transition-all duration-300;
+}
+header nav .navbar-collapse-mobile .burger span:nth-child(1).active {
+  @apply transform rotate-45 translate-y-1.5;
+}
+header nav .navbar-collapse-mobile .burger span:nth-child(2).active {
+  @apply opacity-0;
+}
+header nav .navbar-collapse-mobile .burger span:nth-child(3).active {
+  @apply transform -rotate-45 -translate-y-1.5;
+}
+
+footer {
+  @apply bg-primary w-full max-lg:px-4 py-24 lg:px-14 relative;
+}
+footer .footer-item {
+  @apply w-fit;
+}
+footer .footer-item h4 {
+  @apply text-white font-bold text-xl mb-4;
+}
+footer .footer-item .footer-text {
+  @apply text-white font-semibold text-sm w-fit;
+}
+footer .footer-item .footer-text-link {
+  @apply underline;
+}
+footer .footer-item .footer-icon {
+  @apply flex gap-2 mt-4;
+}
+footer .footer-credit {
+  @apply absolute right-0 bottom-5 lg:right-5 text-white text-sm flex gap-4 max-lg:left-0 max-lg:justify-center;
+}
+
+.card {
+  @apply col-span-3 bg-tertial-grey-background border-tertial-grey-border border border-s p-8 rounded-xl;
+}
+.card .card-img {
+  @apply h-[150px] w-full object-cover mb-4 rounded-md;
+}
+.card .card-text {
+  @apply flex flex-col gap-1 mb-4;
+}
+.card .card-text .card-title {
+  @apply text-xl font-bold;
+}
+.card .card-text .card-subtitle {
+  @apply text-text;
+}
+.card .card-list {
+  @apply flex flex-col gap-2 font-semibold;
+}
+.card .card-list > li {
+  @apply flex gap-2;
+}
+
+.avis {
+  @apply bg-tertial-grey-background border-[#d9e0e6] border border-s p-4 sm:p-8 rounded-xl w-[346px] max-sm:w-[280px];
+}
+.avis .avis-header {
+  @apply flex gap-4 items-center;
+}
+.avis .avis-header h3 {
+  @apply font-bold;
+}
+.avis .avis-content {
+  @apply mt-4;
+}
+
+.pay {
+  @apply bg-white border-gray-200 border border-solid w-full rounded-xl p-8 flex flex-col;
+}
+.pay h3 {
+  @apply text-2xl font-bold mt-4;
+}
+.pay p {
+  @apply mt-2 mb-6 text-text;
+}
+
 .button {
   @apply bg-primary text-white p-2 px-4 font-semibold flex items-center rounded;
 }
@@ -19,40 +130,8 @@
   @apply text-black font-semibold flex items-center rounded text-xl gap-2 underline cursor-pointer;
 }
 
-header {
-  @apply py-5 px-10;
-}
-header nav {
-  @apply flex justify-between items-center;
-}
-header nav .navbar-collapse {
-  @apply flex gap-4 items-center;
-}
-header nav .navbar-collapse .navbar-item {
-  @apply text-base font-semibold flex gap-2 items-center;
-}
-
-footer {
-  @apply bg-primary w-full pt-20 pb-24 relative;
-}
-footer .footer-item {
-  @apply col-span-3;
-}
-footer .footer-item h4 {
-  @apply text-white font-bold text-xl mb-4;
-}
-footer .footer-item .footer-text {
-  @apply text-white font-semibold text-sm w-fit;
-}
-footer .footer-item .footer-text-link {
-  @apply underline;
-}
-footer .footer-item .footer-icon {
-  @apply flex gap-2 mt-4;
-}
-
 h1 {
-  @apply text-5xl font-bold;
+  @apply lg:text-5xl font-bold text-4xl;
 }
 
 h2 {
@@ -72,55 +151,40 @@ section {
   @apply mt-110;
 }
 
-.card {
-  @apply col-span-3 bg-[#f3f6f8] border-[#d9e0e6] border border-s p-8 rounded-xl;
-}
-.card .card-img {
-  @apply h-[150px] w-full object-cover mb-4 rounded-md;
-}
-.card .card-text {
-  @apply flex flex-col gap-1 mb-4;
-}
-.card .card-text .card-title {
-  @apply text-2xl font-bold;
-}
-.card .card-text .card-subtitle {
-  @apply text-text;
-}
-.card .card-list {
-  @apply flex flex-col gap-2 font-semibold;
-}
-.card .card-list > li {
-  @apply flex gap-2;
-}
-
-.avis {
-  width: 346px;
-  @apply bg-[#f3f6f8] border-[#d9e0e6] border border-s p-8 rounded-xl;
-}
-.avis .avis-header {
-  @apply flex gap-4 items-center;
-}
-.avis .avis-header h3 {
-  @apply font-bold;
-}
-.avis .avis-content {
-  @apply mt-4;
-}
-
-.pay {
-  @apply bg-white border-gray-200 border border-solid w-full max-w-[500px] rounded-xl p-8 flex flex-col;
-}
-.pay h3 {
-  @apply text-2xl font-bold mt-4;
-}
-.pay p {
-  @apply mt-2 mb-6 text-text;
-}
-
 body {
   font-family: "DM Sans", sans-serif;
 }
+body main .page_home .head_banner {
+  @apply flex flex-col gap-10 lg:grid lg:gap-0 grid-cols-12;
+}
+body main .page_home .head_banner .head_text {
+  @apply col-span-6 lg:px-5 flex flex-col lg:gap-4;
+}
+body main .page_home .head_banner .head_image {
+  @apply col-span-6;
+}
+body main .page_home .head_banner .head_image img {
+  @apply w-full lg:h-full h-[55vw] object-cover rounded-lg;
+}
+body main .page_home .pay_items {
+  @apply flex gap-4 max-lg:flex-col;
+}
+body main .page_home .offres {
+  @apply flex max-md:flex-nowrap max-md:overflow-x-scroll max-md:overflow-y-hidden max-md:snap-mandatory md:grid md:grid-cols-12 gap-y-4 gap-x-4 mt-10 pb-4;
+}
+body main .page_home .offres::-webkit-scrollbar {
+  @apply h-2;
+}
+body main .page_home .offres::-webkit-scrollbar-track {
+  @apply bg-tertial-grey-background rounded;
+}
+body main .page_home .offres::-webkit-scrollbar-thumb {
+  @apply bg-tertial-grey-border rounded;
+}
+body main .page_home .offres .card {
+  @apply max-md:min-w-80 max-md:p-4 md:col-span-6 xl:col-span-3;
+}
+
 .st0 {
   fill: #E52621;
 }

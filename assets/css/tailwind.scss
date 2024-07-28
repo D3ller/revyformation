@@ -6,9 +6,10 @@
 
 @import "_mixins.scss";
 @import "_layouts.scss";
+@import "_components.scss";
 
 h1 {
-  @apply text-5xl font-bold;
+  @apply lg:text-5xl font-bold text-4xl;
 }
 
 h2 {
@@ -29,68 +30,50 @@ section {
   @apply mt-110;
 }
 
-.card {
-  @apply col-span-3 bg-[#f3f6f8] border-[#d9e0e6] border border-s p-8 rounded-xl;
-
-  .card-img {
-    @apply h-[150px] w-full object-cover mb-4 rounded-md;
-  }
-
-  .card-text {
-    @apply flex flex-col gap-1 mb-4;
-    .card-title {
-      @apply text-2xl font-bold;
-    }
-
-    .card-subtitle {
-      @apply text-text
-    }
-  }
-
-
-  .card-list {
-    @apply flex flex-col gap-2 font-semibold;
-    > li {
-      @apply flex gap-2;
-    }
-  }
-}
-
-.avis {
-  width: 346px;
-  @apply bg-[#f3f6f8] border-[#d9e0e6] border border-s p-8 rounded-xl;
-  .avis-header {
-    @apply flex gap-4 items-center;
-    h3 {
-      @apply font-bold;
-    }
-  }
-
-  .avis-content {
-    @apply mt-4;
-  }
-}
-
-.pay {
-  @apply bg-white border-gray-200 border border-solid w-full max-w-[500px] rounded-xl p-8 flex flex-col;
-  h3 {
-    @apply text-2xl font-bold mt-4;
-  }
-  p {
-    @apply mt-2 mb-6 text-text;
-  }
-}
-
 
 body {
   font-family: "DM Sans", sans-serif;
 
   main {
+    .page_home {
+      .head_banner {
+        @apply flex flex-col gap-10 lg:grid lg:gap-0 grid-cols-12;
+        .head_text {
+          @apply col-span-6 lg:px-5 flex flex-col lg:gap-4;
+        }
 
-  }
+        .head_image {
+          @apply col-span-6;
+          img {
+            @apply w-full lg:h-full h-[55vw] object-cover rounded-lg;
+          }
+        }
+      }
 
-  footer {
+      .pay_items {
+        @apply flex gap-4 max-lg:flex-col
+      }
 
+      .offres {
+        @apply flex max-md:flex-nowrap max-md:overflow-x-scroll max-md:overflow-y-hidden max-md:snap-mandatory md:grid md:grid-cols-12 gap-y-4 gap-x-4 mt-10 pb-4;
+        &::-webkit-scrollbar {
+          @apply h-2;
+        }
+
+        &::-webkit-scrollbar-track {
+          @apply bg-tertial-grey-background rounded;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          @apply bg-tertial-grey-border rounded;
+        }
+
+        .card {
+          @apply max-md:min-w-80 max-md:p-4 md:col-span-6 xl:col-span-3;
+        }
+      }
+
+    }
   }
 }
 

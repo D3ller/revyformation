@@ -1,9 +1,8 @@
 <script setup lang="ts">
-
 </script>
 
 <template>
-  <svg version="1.1" width="233" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        viewBox="0 0 1767.22 469.9" style="enable-background:new 0 0 1767.22 469.9;" xml:space="preserve">
     <g>
 	<path class="st0" d="M1767.22,269.89c0,1.98-0.14,4.13-0.42,6.44c-0.28,2.31-0.72,4.72-1.35,7.23l-17.39,72.41h-37.83l13.25-55.18

@@ -4,8 +4,8 @@
 
 <template>
   <footer>
-    <div class="container">
-      <div class="grid grid-cols-12 gap-4">
+    <div class="xl:container">
+      <div class="flex gap-4 justify-between max-lg:flex-col">
 
         <div class="footer-item">
           <svg version="1.1" width="233" fill="white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -2057,6 +2057,7 @@
             <router-link class="footer-text-link footer-text" to="/tarifs">Tarifs</router-link>
             <router-link class="footer-text-link footer-text" to="/financement">Financement</router-link>
             <router-link class="footer-text-link footer-text" to="/reservation">Réservation</router-link>
+            <router-link class="footer-text-link footer-text" to="/mentions-legales">Mentions légales</router-link>
 
           </div>
         </div>
@@ -2079,7 +2080,9 @@
       </div>
     </div>
 
-    <div class="footer-absolute"></div>
+    <div class="footer-credit">
+      <a class="flex items-center gap-2" href="https://karibsen.fr">Crée avec <Icon size="15px" name="circle-flags:gp"></Icon> par Karibsen Studi*</a>
+    </div>
   </footer>
 </template>
 

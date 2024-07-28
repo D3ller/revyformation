@@ -1,25 +1,63 @@
 header {
-  @apply py-5 px-10;
+  @apply py-5 lg:px-10 px-5;
   nav {
-    @apply flex justify-between items-center ;
+    @apply flex justify-between items-center;
     .navbar-collapse {
+      @media screen and (max-width: 900px) {
+        @apply hidden;
+      }
       @apply flex gap-4 items-center;
       .navbar-item {
         @apply text-base font-semibold flex gap-2 items-center;
+      }
+    }
+
+    .navbar-collapse-mobile {
+      @media screen and (min-width: 900px) {
+        @apply hidden;
+      }
+      @apply flex gap-4 items-center;
+      .burger {
+        @apply cursor-pointer flex flex-col gap-1 p-2.5 border-tertial-grey-border border rounded transition-all duration-300;
+        &:focus {
+          @apply border-primary shadow-rounded;
+        }
+        span {
+          @apply block h-0.5 w-4 bg-slate-900 rounded-full transition-all duration-300;
+
+          &:nth-child(1) {
+            &.active {
+              @apply transform rotate-45 translate-y-1.5;
+            }
+          }
+
+          &:nth-child(2) {
+            &.active {
+              @apply opacity-0;
+            }
+          }
+
+          &:nth-child(3) {
+            &.active {
+              @apply transform -rotate-45 -translate-y-1.5;
+            }
+          }
+        }
       }
     }
   }
 }
 
 footer {
-  @apply bg-primary w-full pt-20 pb-24 relative;
+  @apply bg-primary w-full max-lg:px-4 py-24 lg:px-14 relative;
   .footer-item {
-    @apply col-span-3;
+    @apply w-fit;
     h4 {
       @apply text-white font-bold text-xl mb-4;
     }
+
     .footer-text {
-        @apply text-white font-semibold text-sm w-fit;
+      @apply text-white font-semibold text-sm w-fit;
       &-link {
         @apply underline;
       }
@@ -28,6 +66,10 @@ footer {
     .footer-icon {
       @apply flex gap-2 mt-4;
     }
+  }
+
+  .footer-credit {
+    @apply absolute right-0 bottom-5 lg:right-5 text-white text-sm flex gap-4 max-lg:left-0 max-lg:justify-center;
   }
 
 }

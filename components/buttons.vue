@@ -4,30 +4,25 @@ import ArrowRight from "~/components/icon/arrow-right.vue";
 defineProps({
   type: {
     type: String,
-    default: "primary",
+    required: false,
+    default: ''
   },
   to: {
     type: String,
-    default: "",
+    required: false,
   },
 })
 </script>
 
 <template>
-  <a class="button" v-if="type === 'primary'">
-    <slot></slot>
+
+
+  <a v-if="!to" :class="type === '' ? 'button' : 'button-' + type">
+    <slot></slot><arrow-right v-if="type === 'arrows'"></arrow-right>
   </a>
-  <router-link class="button-border" to="" v-if="type === 'border'">
-    <slot></slot>
+  <router-link :to="to" v-else-if="to" :class="type === '' ? 'button' : 'button-' + type">
+    <slot></slot><arrow-right v-if="type === 'arrows'"></arrow-right>
   </router-link>
-
-  <a class="button-secondary" v-if="type === 'secondary'">
-    <slot></slot>
-  </a>
-
-  <a class="button-arrows" v-if="type === 'arrow'">
-    <slot></slot><arrow-right></arrow-right>
-  </a>
 
 </template>
 

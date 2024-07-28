@@ -1,0 +1,54 @@
+.card {
+  @apply col-span-3 bg-tertial-grey-background border-tertial-grey-border border border-s p-8 rounded-xl;
+
+  .card-img {
+    @apply h-[150px] w-full object-cover mb-4 rounded-md;
+  }
+
+  .card-text {
+    @apply flex flex-col gap-1 mb-4;
+    .card-title {
+      @apply text-xl font-bold;
+    }
+
+    .card-subtitle {
+      @apply text-text
+    }
+  }
+
+
+  .card-list {
+    @apply flex flex-col gap-2 font-semibold;
+    > li {
+      @apply flex gap-2;
+    }
+  }
+}
+
+.avis {
+  @apply bg-tertial-grey-background border-[#d9e0e6] border border-s p-4 sm:p-8 rounded-xl w-[346px] max-sm:w-[280px];
+  .avis-header {
+    @apply flex gap-4 items-center;
+    h3 {
+      @apply font-bold;
+    }
+  }
+
+  .avis-content {
+    @apply mt-4;
+  }
+}
+
+.pay {
+  @apply bg-white border-gray-200 border border-solid w-full rounded-xl p-8 flex flex-col;
+  h3 {
+    @apply text-2xl font-bold mt-4;
+  }
+  p {
+    @apply mt-2 mb-6 text-text;
+  }
+}
+
+.button {
+  @include button;
+}

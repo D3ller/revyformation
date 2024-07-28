@@ -16,7 +16,3 @@
     @apply text-black font-semibold flex items-center rounded text-xl gap-2 underline cursor-pointer;
   }
 }
-
-.button {
-@include button;
-}
