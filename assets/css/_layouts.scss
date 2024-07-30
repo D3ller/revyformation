@@ -17,11 +17,26 @@ header {
         @apply hidden;
       }
       @apply flex gap-4 items-center;
+
+      .mobile-navbar {
+        @apply fixed h-screen bg-white -right-full bottom-0 w-full sm:border-0 sm:w-80 sm:border-tertial-grey-border sm:border-l sm:duration-500 px-6 pb-6 pt-20 flex flex-col;
+        &.open {
+          @apply max-sm:border-8 max-sm:border-primary
+        }
+        .navbar-item {
+        @apply text-xl capitalize py-3 font-semibold flex justify-between items-center;
+          .chevron {
+
+          }
+        }
+      }
+
       .burger {
-        @apply cursor-pointer flex flex-col gap-1 p-2.5 border-tertial-grey-border border rounded transition-all duration-300;
+        @apply cursor-pointer flex flex-col gap-1 p-2.5 border-tertial-grey-border border rounded transition-all duration-300 bg-white relative z-20;
         &:focus {
           @apply border-primary shadow-rounded;
         }
+
         span {
           @apply block h-0.5 w-4 bg-slate-900 rounded-full transition-all duration-300;
 

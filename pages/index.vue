@@ -20,7 +20,7 @@ fetch('https://maxsteel.karibsen.fr/image/9881c3272092daf43108f6ff485a4e60.csv')
 
 <template>
   <div class="page_home">
-    <section class="container">
+    <section class="container max-lg:mt-14">
       <div class="head_banner">
         <div class="head_text">
           <h1>Obtenez votre permis dans votre auto-école à Troyes</h1>
@@ -62,7 +62,7 @@ fetch('https://maxsteel.karibsen.fr/image/9881c3272092daf43108f6ff485a4e60.csv')
     </section>
 
     <section class="container">
-      <h2 class="text-center mb-10">Comment payer vos forfaits ?</h2>
+      <h2 class="text-center mb-10">Comment payer vos forfaits&nbsp;?</h2>
 
 
         <div class="pay_items">

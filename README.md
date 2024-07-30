@@ -35,7 +35,7 @@ bun run dev
 
 ## Langages utilisés
 
-![Lang](https://skillicons.dev/icons?i=vue,nuxt,typescript)
+![Lang](https://skillicons.dev/icons?i=vue,nuxt,typescript,tailwind)
 
 
 ## Auteur

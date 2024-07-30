@@ -27,8 +27,17 @@ header nav .navbar-collapse-mobile {
     @apply hidden;
   }
 }
+header nav .navbar-collapse-mobile .mobile-navbar {
+  @apply fixed h-screen bg-white -right-full bottom-0 w-full sm:border-0 sm:w-80 sm:border-tertial-grey-border sm:border-l sm:duration-500 px-6 pb-6 pt-20 flex flex-col;
+}
+header nav .navbar-collapse-mobile .mobile-navbar.open {
+  @apply max-sm:border-8 max-sm:border-primary;
+}
+header nav .navbar-collapse-mobile .mobile-navbar .navbar-item {
+  @apply text-xl capitalize py-3 font-semibold flex justify-between items-center;
+}
 header nav .navbar-collapse-mobile .burger {
-  @apply cursor-pointer flex flex-col gap-1 p-2.5 border-tertial-grey-border border rounded transition-all duration-300;
+  @apply cursor-pointer flex flex-col gap-1 p-2.5 border-tertial-grey-border border rounded transition-all duration-300 bg-white relative z-20;
 }
 header nav .navbar-collapse-mobile .burger:focus {
   @apply border-primary shadow-rounded;
@@ -135,7 +144,7 @@ h1 {
 }
 
 h2 {
-  @apply text-4xl font-bold;
+  @apply lg:text-4xl font-bold text-3xl;
 }
 h2 .lighter_text {
   @apply relative;
