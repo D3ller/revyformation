@@ -19,6 +19,21 @@ header nav .navbar-collapse {
 header nav .navbar-collapse .navbar-item {
   @apply text-base font-semibold flex gap-2 items-center;
 }
+header nav .navbar-collapse .navbar-item .chevron {
+  @apply transition-all duration-300;
+}
+header nav .navbar-collapse .navbar-item .chevron.reverse {
+  @apply transform rotate-180;
+}
+header nav .navbar-collapse .sub-menu {
+  @apply absolute flex flex-col bg-white px-2 py-2 rounded border border-gray-200 top-10 left-0 w-52;
+}
+header nav .navbar-collapse .sub-menu .navbar-item {
+  @apply py-2 px-4 rounded;
+}
+header nav .navbar-collapse .sub-menu .navbar-item:hover {
+  @apply bg-[#f8f9fa];
+}
 header nav .navbar-collapse-mobile {
   @apply flex gap-4 items-center;
 }
@@ -28,13 +43,19 @@ header nav .navbar-collapse-mobile {
   }
 }
 header nav .navbar-collapse-mobile .mobile-navbar {
-  @apply fixed h-screen bg-white -right-full bottom-0 w-full sm:border-0 sm:w-80 sm:border-tertial-grey-border sm:border-l duration-500 px-6 pb-6 pt-20 flex flex-col;
+  @apply fixed h-screen bg-white -right-full bottom-0 w-full sm:border-0 sm:w-80 sm:border-tertial-grey-border sm:border-l sm:duration-500 px-6 pb-6 pt-20 flex flex-col;
 }
 header nav .navbar-collapse-mobile .mobile-navbar.open {
   @apply max-sm:border-8 max-sm:border-primary;
 }
 header nav .navbar-collapse-mobile .mobile-navbar .navbar-item {
   @apply text-xl capitalize py-3 font-semibold flex justify-between items-center;
+}
+header nav .navbar-collapse-mobile .mobile-navbar .navbar-item .chevron {
+  @apply transition-all duration-300;
+}
+header nav .navbar-collapse-mobile .mobile-navbar .navbar-item .chevron.reverse {
+  @apply transform rotate-180;
 }
 header nav .navbar-collapse-mobile .burger {
   @apply cursor-pointer flex flex-col gap-1 p-2.5 border-tertial-grey-border border rounded transition-all duration-300 bg-white relative z-20;
@@ -75,6 +96,13 @@ footer .footer-item .footer-icon {
 }
 footer .footer-credit {
   @apply absolute right-0 bottom-5 lg:right-5 text-white text-sm flex gap-4 max-lg:left-0 max-lg:justify-center;
+}
+
+.logo-container {
+  @apply flex justify-center gap-10;
+}
+.logo-container img {
+  @apply w-40 object-contain;
 }
 
 .card {
@@ -206,6 +234,15 @@ section {
 
 body {
   font-family: "DM Sans", sans-serif;
+  @apply overflow-x-hidden;
+}
+body.o {
+  @apply overflow-hidden;
+}
+@media screen and (min-width: 900px) {
+  body.o {
+    @apply overflow-auto;
+  }
 }
 body main .page_home .head_banner {
   @apply flex flex-col gap-10 lg:grid lg:gap-0 grid-cols-12;
@@ -237,11 +274,20 @@ body main .page_home .offres::-webkit-scrollbar-thumb {
 body main .page_home .offres .card {
   @apply max-md:min-w-80 max-md:p-4 md:col-span-6 xl:col-span-3;
 }
-body main .page_taif .pay_items {
+body main .page_tarif .filter {
+  @apply px-8 py-3 w-full flex items-center gap-2;
+}
+body main .page_tarif .filter .filter_item {
+  @apply pr-2 pl-3 py-1.5 m-1 border border-gray-100 rounded-full cursor-pointer;
+}
+body main .page_tarif .filter .filter_item:hover {
+  @apply bg-gray-100;
+}
+body main .page_tarif .pay_items {
   @apply flex gap-4 max-lg:flex-col;
 }
-body main .page_taif .formules {
-  @apply grid grid-cols-12 gap-4;
+body main .page_tarif .formules {
+  @apply grid md:grid-cols-12 grid-cols-6 gap-4;
 }
 body main .page_connexion {
   @apply flex items-center;
@@ -257,6 +303,18 @@ body main .page_financement .financement .financement-title {
 }
 body main .page_financement .financement .financement-description {
   @apply text-text mb-5;
+}
+body main .page_mentions-legales .parts {
+  @apply flex flex-col gap-5 w-full mt-5;
+}
+body main .page_mentions-legales .parts .parts-item h2 {
+  @apply mb-5;
+}
+body main .page_code .code {
+  @apply grid grid-cols-12 gap-4 my-10;
+}
+body main .page_code .code .code-item {
+  @apply col-span-4 p-8 border border-gray-100 rounded-xl;
 }
 body main .page_contact .contact_form {
   @apply w-full mt-5 max-w-2xl grid grid-cols-6 gap-4;

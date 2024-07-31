@@ -9,6 +9,22 @@ header {
       @apply flex gap-4 items-center;
       .navbar-item {
         @apply text-base font-semibold flex gap-2 items-center;
+        .chevron {
+          @apply transition-all duration-300;
+          &.reverse {
+            @apply transform rotate-180;
+          }
+        }
+      }
+
+      .sub-menu {
+        @apply absolute flex flex-col bg-white px-2 py-2 rounded border border-gray-200 top-10 left-0 w-52;
+        .navbar-item {
+          @apply py-2 px-4 rounded;
+          &:hover {
+            @apply bg-[#f8f9fa];
+          }
+        }
       }
     }
 
@@ -19,14 +35,18 @@ header {
       @apply flex gap-4 items-center;
 
       .mobile-navbar {
-        @apply fixed h-screen bg-white -right-full bottom-0 w-full sm:border-0 sm:w-80 sm:border-tertial-grey-border sm:border-l duration-500 px-6 pb-6 pt-20 flex flex-col;
+        @apply fixed h-screen bg-white -right-full bottom-0 w-full sm:border-0 sm:w-80 sm:border-tertial-grey-border sm:border-l sm:duration-500 px-6 pb-6 pt-20 flex flex-col;
         &.open {
           @apply max-sm:border-8 max-sm:border-primary
         }
-        .navbar-item {
-        @apply text-xl capitalize py-3 font-semibold flex justify-between items-center;
-          .chevron {
 
+        .navbar-item {
+          @apply text-xl capitalize py-3 font-semibold flex justify-between items-center;
+          .chevron {
+            @apply transition-all duration-300;
+            &.reverse {
+              @apply transform rotate-180;
+            }
           }
         }
       }
@@ -87,4 +107,11 @@ footer {
     @apply absolute right-0 bottom-5 lg:right-5 text-white text-sm flex gap-4 max-lg:left-0 max-lg:justify-center;
   }
 
+}
+
+.logo-container {
+  @apply flex justify-center gap-10;
+  img {
+    @apply w-40 object-contain;
+  }
 }

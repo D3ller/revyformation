@@ -1,6 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
+  runtimeConfig: {
+    public: {
+      name: 'RevyFormation'
+    }
+  },
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    }
+  },
   devtools: { enabled: true },
   css: ['~/assets/css/tailwind.css'],
   modules: [
@@ -8,7 +19,8 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/image",
     'nuxt-splide',
-    "@nuxt/icon"
+    "@nuxt/icon",
+    "@nuxtjs/robots"
   ],
   ssr: false,
   fonts: {
@@ -19,5 +31,6 @@ export default defineNuxtConfig({
   },
   splide: {
     theme: 'default'
-  }
+  },
+  site: {indexable: false}
 })

@@ -8,14 +8,15 @@ let goToUp = () => {
 </script>
 
 <template>
+
   <footer>
     <div class="xl:container">
       <div class="flex gap-4 justify-between max-lg:flex-col">
 
         <div class="footer-item">
-          <svg version="1.1" @click="goToUp()" class="cursor-pointer" width="233" fill="white"
+          <svg @click="goToUp()" class="cursor-pointer" width="233" fill="white"
                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-               viewBox="0 0 1767.22 469.9" style="enable-background:new 0 0 1767.22 469.9;" xml:space="preserve">
+               viewBox="0 0 1767.22 469.9" xml:space="preserve">
     <g>
 	<path d="M1767.22,269.89c0,1.98-0.14,4.13-0.42,6.44c-0.28,2.31-0.72,4.72-1.35,7.23l-17.39,72.41h-37.83l13.25-55.18
 		c0.97-4.09,1.73-7.59,2.28-10.5c0.55-2.9,0.83-5.61,0.83-8.13c0-4.29-1.14-7.43-3.43-9.41c-2.28-1.98-6.47-2.97-12.57-2.97
@@ -2049,19 +2050,20 @@ let goToUp = () => {
           <div class="flex flex-col gap-2">
             <a class="footer-text" href="https://maps.app.goo.gl/gTaw1oFFTAv3VsKe7">14 Rue du Colonel Driant - 10000
               Troyes</a>
+            <p class="footer-text">A proximité de la gare routière de Troyes</p>
             <a href="tel:0325404994" class="footer-text">03 25 40 49 94</a>
             <a href="mailto:contact@revyformation.fr" class="footer-text" to="/financement">contact@revyformation.fr</a>
 
 
           </div>
           <div class="footer-icon">
-            <a href="https://www.facebook.com/revyformationautoecoletroyes">
+            <a href="https://www.facebook.com/revyformationautoecoletroyes" aria-label="Facebook">
               <Icon size="25px" style="color: white" name="mdi:facebook-box"></Icon>
             </a>
-            <a href="https://www.instagram.com/revyformation">
+            <a href="https://www.instagram.com/revyformation" aria-label="Instagram">
               <Icon size="25px" style="color: white" name="mdi:instagram"></Icon>
             </a>
-            <a href="https://www.twitter.com/revyformation">
+            <a href="https://www.twitter.com/revyformation" aria-label="Twitter">
               <Icon size="25px" style="color: white" name="mdi:twitter"></Icon>
             </a>
           </div>
@@ -2083,14 +2085,14 @@ let goToUp = () => {
           <div class="flex flex-col gap-2">
             <router-link class="footer-text-link footer-text" to="/code">Code de la route</router-link>
             <router-link class="footer-text-link footer-text" to="/conduite">Conduite</router-link>
-            <router-link class="footer-text-link footer-text" to="/post-permis">Formation Post-permis</router-link>
-            <router-link class="footer-text-link footer-text" to="/boite-manuelle">Formation Boîte manuelle
+            <router-link class="footer-text-link footer-text" to="/information/post-permis">Formation Post-permis</router-link>
+            <router-link class="footer-text-link footer-text" to="/information/boite-manuelle">Formation Boîte manuelle
             </router-link>
-            <router-link class="footer-text-link footer-text" to="/conduite-accompagnee">Conduite accompagnée
+            <router-link class="footer-text-link footer-text" to="/information/conduite-accompagnee">Conduite accompagnée
             </router-link>
-            <router-link class="footer-text-link footer-text" to="/conduite-supervisee">Conduite supervisée
+            <router-link class="footer-text-link footer-text" to="/information/conduite-supervisee">Conduite supervisée
             </router-link>
-            <router-link class="footer-text-link footer-text" to="/formation-acceleree">Formation accélérée
+            <router-link class="footer-text-link footer-text" to="/information/formation-acceleree">Formation accélérée
             </router-link>
           </div>
         </div>

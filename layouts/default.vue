@@ -3,7 +3,7 @@ import Navbar from "~/components/layouts/navbar.vue";
 </script>
 
 <template>
-  <body class="overflow-x-hidden">
+
 <navbar></navbar>
 
   <main>
@@ -12,8 +12,10 @@ import Navbar from "~/components/layouts/navbar.vue";
     </div>
   </main>
 
+<logo-list/>
+
+
   <layouts-footer></layouts-footer>
-  </body>
 
 
 </template>

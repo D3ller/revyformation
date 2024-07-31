@@ -41,6 +41,13 @@ section {
 
 body {
   font-family: "DM Sans", sans-serif;
+  @apply overflow-x-hidden;
+  &.o {
+    @media screen and (min-width: 900px) {
+  @apply overflow-auto;
+    }
+      @apply overflow-hidden;
+  }
 
   main {
     .page_home {
@@ -83,13 +90,24 @@ body {
 
     }
 
-    .page_taif {
+    .page_tarif {
+
+      .filter {
+        @apply px-8 py-3 w-full flex items-center gap-2;
+        .filter_item {
+          @apply pr-2 pl-3 py-1.5 m-1 border border-gray-100 rounded-full cursor-pointer;
+          &:hover {
+            @apply bg-gray-100;
+          }
+        }
+      }
+
       .pay_items {
         @apply flex gap-4 max-lg:flex-col
       }
 
       .formules {
-        @apply grid grid-cols-12 gap-4;
+        @apply grid md:grid-cols-12 grid-cols-6 gap-4;
       }
     }
 
@@ -108,6 +126,27 @@ body {
         }
         .financement-description {
           @apply text-text mb-5;
+
+        }
+      }
+    }
+
+    .page_mentions-legales {
+      .parts {
+        @apply flex flex-col gap-5 w-full mt-5;
+        .parts-item {
+          h2 {
+            @apply mb-5;
+          }
+        }
+      }
+    }
+
+    .page_code {
+      .code {
+        @apply grid grid-cols-12 gap-4 my-10;
+        .code-item {
+            @apply col-span-4 p-8 border border-gray-100 rounded-xl;
 
         }
       }

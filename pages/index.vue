@@ -18,6 +18,11 @@ fetch('https://maxsteel.karibsen.fr/image/9881c3272092daf43108f6ff485a4e60.csv')
 
 useHead({
   title: "Auto-école RevyFormation",
+  meta: {
+    preconnect: [
+      {href: "https://maxsteel.karibsen.fr", crossorigin: true},
+    ],
+  }
 })
 
 </script>
@@ -29,7 +34,8 @@ useHead({
         <div class="head_text">
           <h1>Obtenez votre permis dans votre auto-école à Troyes</h1>
 
-          <p class="lg:mt-10 mt-5 mb-5">L’auto-école RevyFormation vous accompagne vers l’obtention de votre permis en vous
+          <p class="lg:mt-10 mt-5 mb-5">L’auto-école RevyFormation vous accompagne vers l’obtention de votre permis en
+            vous
             proposant une formation adaptée à vos besoins. Nos moniteurs vous accompagnent dans votre apprentissage de
             la
             conduite pour vous permettre de passer votre permis en toute sérénité.
@@ -43,8 +49,8 @@ useHead({
           </div>
         </div>
         <div class="head_image">
-          <img src="https://www.road-academy.be/modules/homeslider/images/image_default_16_1.jpg" alt="Image de voiture"
-               >
+          <NuxtImg format="webp" src="https://www.road-academy.be/modules/homeslider/images/image_default_16_1.jpg"
+                   alt="Image de voiture"/>
         </div>
       </div>
     </section>
@@ -69,32 +75,32 @@ useHead({
       <h2 class="text-center mb-10">Comment payer vos forfaits&nbsp;?</h2>
 
 
-        <div class="pay_items">
-          <div class="pay">
-            <NuxtImg
-                src="https://lh6.googleusercontent.com/proxy/tXfLhabwt67u4fRYFVQ-O3M1PsMDLdzuMHbw-jnFDD2OGz0gA2LbViZBtdeb4ThTSZkvC52myRelQ4OE5q2yEHu4fjm6iurFQy7MDx-WOVmKEZTdJBuF4EtQWwpZUGcUcQ"
-                alt="Logo CPF" width="100"/>
+      <div class="pay_items">
+        <div class="pay">
+          <NuxtImg
+              src="https://lh6.googleusercontent.com/proxy/tXfLhabwt67u4fRYFVQ-O3M1PsMDLdzuMHbw-jnFDD2OGz0gA2LbViZBtdeb4ThTSZkvC52myRelQ4OE5q2yEHu4fjm6iurFQy7MDx-WOVmKEZTdJBuF4EtQWwpZUGcUcQ"
+              alt="Logo CPF" width="100"/>
 
-            <h3>Espèces/Carte bleue</h3>
-            <p>Pour l'espèce: Paiement en 1 ou 2 fois sans frais<br>Pour la carte bleue: Paiement en 3 ou 4 fois sans
-              frais</p>
+          <h3>Espèces/Carte bleue</h3>
+          <p>Pour l'espèce: Paiement en 1 ou 2 fois sans frais<br>Pour la carte bleue: Paiement en 3 ou 4 fois sans
+            frais</p>
 
-            <buttons type="arrows">Payer votre forfait</buttons>
+          <buttons type="arrows">Payer votre forfait</buttons>
 
-          </div>
-
-          <div class="pay">
-            <NuxtImg
-                src="https://www.perspective-formation.fr/wp-content/uploads/2019/11/Logo-Mon-Compte-Formation-Appli-CPF.jpg"
-                alt="Logo CPF" width="100"/>
-
-            <h3>Compte CPF</h3>
-
-            <p>Découvrez les formations éligibles pour financer votre permis de conduire.</p>
-
-            <buttons type="arrows">Découvrir le CPF</buttons>
-          </div>
         </div>
+
+        <div class="pay">
+          <NuxtImg
+              src="https://www.perspective-formation.fr/wp-content/uploads/2019/11/Logo-Mon-Compte-Formation-Appli-CPF.jpg"
+              alt="Logo CPF" width="100"/>
+
+          <h3>Compte CPF</h3>
+
+          <p>Découvrez les formations éligibles pour financer votre permis de conduire.</p>
+
+          <buttons to="https://www.service-public.fr/particuliers/vosdroits/F10705" type="arrows">Découvrir le CPF</buttons>
+        </div>
+      </div>
 
     </section>
 

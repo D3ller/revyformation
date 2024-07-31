@@ -2,6 +2,10 @@
 definePageMeta({
   layout: 'admin',
 })
+
+useHead({
+  title: "Connexion – RevyFormation",
+})
 </script>
 
 <template>
