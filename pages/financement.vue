@@ -13,14 +13,14 @@ useHead({
         <div class="financement">
           <h2 class="financement-title">Financement classique</h2>
           <p class="financement-description">(Permis à 1€, Aide au permis de Pôle Emploi, Aide au permis pour personnes handicapées...)</p>
-          <buttons type="arrows">Plus d'information</buttons>
+          <buttons href="https://www.securite-routiere.gouv.fr/passer-son-permis-de-conduire/financement-du-permis-de-conduire" type="arrows">Plus d'information</buttons>
 
         </div>
 
         <div class="financement">
           <h2 class="financement-title">Financement CPF</h2>
           <p class="financement-description">Cette formation est éligible à MonCompteFormation. Vous pouvez utiliser votre CPF pour financer votre permis de conduire.</p>
-          <buttons type="arrows">Plus d'information</buttons>
+          <buttons to="/tarifs" type="arrows">Plus d'information</buttons>
 
         </div>
       </div>

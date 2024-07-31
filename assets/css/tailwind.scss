@@ -144,7 +144,7 @@ body {
 
     .page_code {
       .code {
-        @apply grid grid-cols-12 gap-4 my-10;
+        @apply grid md:grid-cols-3 lg:grid-cols-12 gap-4 my-10;
         .code-item {
             @apply col-span-4 p-8 border border-gray-100 rounded-xl;
 

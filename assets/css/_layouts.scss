@@ -110,7 +110,18 @@ footer {
 }
 
 .logo-container {
-  @apply flex justify-center gap-10;
+  @apply flex md:justify-center gap-10 max-lg:flex-nowrap max-lg:overflow-x-scroll max-lg:overflow-y-hidden max-lg:snap-mandatory max-lg:pb-5;
+  &::-webkit-scrollbar {
+    @apply h-2;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply bg-tertial-grey-background rounded;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-tertial-grey-border rounded;
+  }
   img {
     @apply w-40 object-contain;
   }

@@ -78,10 +78,22 @@ let openMenu = () => {
         </button>
 
         <div ref="mobile" class="mobile-navbar">
-          <router-link class="navbar-item" v-for="item in navMobile" :key="item.text" :to="item.link" @click="openMenu()">
-            {{ item.text }}
-            <Chevron v-if="item.more" :direction="true"/>
-          </router-link>
+                  <span v-for="item in navMobile" :key="item.text">
+                    <template v-if="item.link">
+                      <router-link class="navbar-item" :to="item.link" @click="openMenu()">
+                        {{ item.text }}
+                      </router-link>
+                    </template>
+                    <template v-else>
+                      <button class="navbar-item dropdown w-full" @click="subMenu = !subMenu">
+                        {{ item.text }}
+                        <Chevron v-if="item.more" :direction="subMenu"/>
+                      </button>
+                    </template>
+                      <router-link class="navbar-item" v-if="subMenu" v-for="sub in item.subItem" :key="sub.text" :to="sub.link" @click="openMenu()">
+                        {{ sub.text }}
+                      </router-link>
+                  </span>
         </div>
       </div>
     </nav>

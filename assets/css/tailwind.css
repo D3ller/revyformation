@@ -99,7 +99,16 @@ footer .footer-credit {
 }
 
 .logo-container {
-  @apply flex justify-center gap-10;
+  @apply flex md:justify-center gap-10 max-lg:flex-nowrap max-lg:overflow-x-scroll max-lg:overflow-y-hidden max-lg:snap-mandatory max-lg:pb-5;
+}
+.logo-container::-webkit-scrollbar {
+  @apply h-2;
+}
+.logo-container::-webkit-scrollbar-track {
+  @apply bg-tertial-grey-background rounded;
+}
+.logo-container::-webkit-scrollbar-thumb {
+  @apply bg-tertial-grey-border rounded;
 }
 .logo-container img {
   @apply w-40 object-contain;
@@ -311,7 +320,7 @@ body main .page_mentions-legales .parts .parts-item h2 {
   @apply mb-5;
 }
 body main .page_code .code {
-  @apply grid grid-cols-12 gap-4 my-10;
+  @apply grid md:grid-cols-3 lg:grid-cols-12 gap-4 my-10;
 }
 body main .page_code .code .code-item {
   @apply col-span-4 p-8 border border-gray-100 rounded-xl;

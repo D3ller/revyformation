@@ -11,6 +11,10 @@ defineProps({
     type: String,
     required: false,
   },
+  href: {
+    type: String,
+    required: false,
+  }
 })
 </script>
 
@@ -20,7 +24,7 @@ defineProps({
   </button>
 
   <template v-else>
-    <a v-if="!to" :class="type === '' ? 'button' : 'button-' + type">
+    <a v-if="!to" :href="href" :class="type === '' ? 'button' : 'button-' + type">
       <slot></slot>
       <arrow-right v-if="type === 'arrows'"></arrow-right>
     </a>

@@ -19,9 +19,8 @@ fetch('https://maxsteel.karibsen.fr/image/9881c3272092daf43108f6ff485a4e60.csv')
 useHead({
   title: "Auto-école RevyFormation",
   meta: {
-    preconnect: [
-      {href: "https://maxsteel.karibsen.fr", crossorigin: true},
-    ],
+    preconnect: {href: "https://maxsteel.karibsen.fr", crossorigin: true}
+
   }
 })
 
