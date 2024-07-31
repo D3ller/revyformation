@@ -19,7 +19,7 @@ header {
       @apply flex gap-4 items-center;
 
       .mobile-navbar {
-        @apply fixed h-screen bg-white -right-full bottom-0 w-full sm:border-0 sm:w-80 sm:border-tertial-grey-border sm:border-l sm:duration-500 px-6 pb-6 pt-20 flex flex-col;
+        @apply fixed h-screen bg-white -right-full bottom-0 w-full sm:border-0 sm:w-80 sm:border-tertial-grey-border sm:border-l duration-500 px-6 pb-6 pt-20 flex flex-col;
         &.open {
           @apply max-sm:border-8 max-sm:border-primary
         }

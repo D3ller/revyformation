@@ -49,6 +49,40 @@
   }
 }
 
+.formule {
+  @apply p-8 border border-gray-100 rounded-xl h-fit;
+  .tag {
+    @apply bg-primary text-white py-2 px-4 w-fit rounded-2xl font-semibold mb-5;
+  }
+  .formule-separator {
+    @apply border-b border-gray-200 my-5;
+  }
+
+  .formule-price {
+    @apply mb-5;
+  }
+
+  .formule-subtitle {
+    @apply text-xl underline underline-offset-2 mb-5 font-semibold;
+  }
+
+  .formule-features-list {
+    @apply flex flex-col gap-2;
+    .formule-features-item {
+      @apply flex gap-4 items-center;
+      .icon {
+        min-width: 1em;
+        min-height: 1em;
+      }
+    }
+
+  }
+}
+
 .button {
   @include button;
+}
+
+.input {
+  @include input;
 }

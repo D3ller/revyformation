@@ -28,7 +28,7 @@ header nav .navbar-collapse-mobile {
   }
 }
 header nav .navbar-collapse-mobile .mobile-navbar {
-  @apply fixed h-screen bg-white -right-full bottom-0 w-full sm:border-0 sm:w-80 sm:border-tertial-grey-border sm:border-l sm:duration-500 px-6 pb-6 pt-20 flex flex-col;
+  @apply fixed h-screen bg-white -right-full bottom-0 w-full sm:border-0 sm:w-80 sm:border-tertial-grey-border sm:border-l duration-500 px-6 pb-6 pt-20 flex flex-col;
 }
 header nav .navbar-collapse-mobile .mobile-navbar.open {
   @apply max-sm:border-8 max-sm:border-primary;
@@ -122,8 +122,34 @@ footer .footer-credit {
   @apply mt-2 mb-6 text-text;
 }
 
+.formule {
+  @apply p-8 border border-gray-100 rounded-xl h-fit;
+}
+.formule .tag {
+  @apply bg-primary text-white py-2 px-4 w-fit rounded-2xl font-semibold mb-5;
+}
+.formule .formule-separator {
+  @apply border-b border-gray-200 my-5;
+}
+.formule .formule-price {
+  @apply mb-5;
+}
+.formule .formule-subtitle {
+  @apply text-xl underline underline-offset-2 mb-5 font-semibold;
+}
+.formule .formule-features-list {
+  @apply flex flex-col gap-2;
+}
+.formule .formule-features-list .formule-features-item {
+  @apply flex gap-4 items-center;
+}
+.formule .formule-features-list .formule-features-item .icon {
+  min-width: 1em;
+  min-height: 1em;
+}
+
 .button {
-  @apply bg-primary text-white p-2 px-4 font-semibold flex items-center rounded;
+  @apply bg-primary text-white p-2 px-4 font-semibold flex items-center rounded justify-center;
 }
 .button-border {
   @apply border-2 border-primary p-2 px-4 text-primary rounded font-semibold duration-300;
@@ -137,6 +163,20 @@ footer .footer-credit {
 .button-arrows {
   text-underline-position: under;
   @apply text-black font-semibold flex items-center rounded text-xl gap-2 underline cursor-pointer;
+}
+
+.input {
+  @apply px-4 py-2.5 border-gray-200 border border-solid outline-0 w-full rounded duration-300 resize-none text-slate-900;
+}
+.input:hover {
+  @apply bg-tertial-grey-background;
+}
+.input:focus {
+  @apply border-primary shadow-rounded;
+}
+
+* {
+  @apply box-border m-0 p-0;
 }
 
 h1 {
@@ -154,6 +194,10 @@ h2 .lighter_text .lighter {
   background: #ffe400;
   bottom: 5px;
   @apply absolute w-[100%] h-4 -z-10 left-0;
+}
+
+.links {
+  @apply text-primary underline;
 }
 
 section {
@@ -192,6 +236,30 @@ body main .page_home .offres::-webkit-scrollbar-thumb {
 }
 body main .page_home .offres .card {
   @apply max-md:min-w-80 max-md:p-4 md:col-span-6 xl:col-span-3;
+}
+body main .page_taif .pay_items {
+  @apply flex gap-4 max-lg:flex-col;
+}
+body main .page_taif .formules {
+  @apply grid grid-cols-12 gap-4;
+}
+body main .page_connexion {
+  @apply flex items-center;
+}
+body main .page_connexion .connexion_container {
+  @apply px-10 h-full flex flex-col items-center justify-center;
+}
+body main .page_financement .financement {
+  @apply col-span-6 border border-gray-100 p-8 rounded-xl;
+}
+body main .page_financement .financement .financement-title {
+  @apply text-2xl mb-5;
+}
+body main .page_financement .financement .financement-description {
+  @apply text-text mb-5;
+}
+body main .page_contact .contact_form {
+  @apply w-full mt-5 max-w-2xl grid grid-cols-6 gap-4;
 }
 
 .st0 {

@@ -50,7 +50,7 @@ let openMenu = () => {
           <Chevron v-if="item.more" :direction="true"/>
         </router-link>
 
-        <buttons to="/login">Connexion</buttons>
+        <buttons to="/connexion">Connexion</buttons>
         <buttons to="/contact" :type="'border'">Contact</buttons>
 
       </div>

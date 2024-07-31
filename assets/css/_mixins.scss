@@ -1,5 +1,5 @@
 @mixin button {
-@apply bg-primary text-white p-2 px-4 font-semibold flex items-center rounded;
+@apply bg-primary text-white p-2 px-4 font-semibold flex items-center rounded justify-center;
   &-border {
     @apply border-2 border-primary p-2 px-4 text-primary rounded font-semibold duration-300;
     &:hover {
@@ -14,5 +14,15 @@
   &-arrows {
     text-underline-position: under;
     @apply text-black font-semibold flex items-center rounded text-xl gap-2 underline cursor-pointer;
+  }
+}
+
+@mixin input {
+@apply px-4 py-2.5 border-gray-200 border border-solid outline-0 w-full rounded duration-300 resize-none text-slate-900;
+  &:hover {
+    @apply bg-tertial-grey-background;
+  }
+  &:focus {
+    @apply border-primary shadow-rounded;
   }
 }

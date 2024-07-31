@@ -16,6 +16,10 @@ fetch('https://maxsteel.karibsen.fr/image/9881c3272092daf43108f6ff485a4e60.csv')
       csv.value = s.data;
     });
 
+useHead({
+  title: "Auto-école RevyFormation",
+})
+
 </script>
 
 <template>

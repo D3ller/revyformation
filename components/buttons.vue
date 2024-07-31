@@ -15,14 +15,20 @@ defineProps({
 </script>
 
 <template>
+  <button v-if="type === 'submit'" class="button" type="submit">
+    <slot></slot>
+  </button>
 
-
-  <a v-if="!to" :class="type === '' ? 'button' : 'button-' + type">
-    <slot></slot><arrow-right v-if="type === 'arrows'"></arrow-right>
-  </a>
-  <router-link :to="to" v-else-if="to" :class="type === '' ? 'button' : 'button-' + type">
-    <slot></slot><arrow-right v-if="type === 'arrows'"></arrow-right>
-  </router-link>
+  <template v-else>
+    <a v-if="!to" :class="type === '' ? 'button' : 'button-' + type">
+      <slot></slot>
+      <arrow-right v-if="type === 'arrows'"></arrow-right>
+    </a>
+    <router-link v-else :to="to" :class="type === '' ? 'button' : 'button-' + type">
+      <slot></slot>
+      <arrow-right v-if="type === 'arrows'"></arrow-right>
+    </router-link>
+  </template>
 
 </template>
 
