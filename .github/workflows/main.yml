@@ -25,7 +25,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no root@147.79.118.50 "
             cd /var/www/html/revyformation &&
-            git pull origin main &&
+            git pull origin master &&
             npm install &&
             npm run build
           "
