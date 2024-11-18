@@ -2100,9 +2100,7 @@ let goToUp = () => {
     </div>
 
     <div class="footer-credit">
-      <a class="flex items-center gap-2" href="https://karibsen.fr">Crée avec
-        <Icon size="15px" name="circle-flags:gp"></Icon>
-        par Karibsen Studi*</a>
+      <a class="flex items-center gap-2" href="https://karibsen.fr">Crée avec ❤️ par Karibsen Studi*</a>
     </div>
   </footer>
 </template>
