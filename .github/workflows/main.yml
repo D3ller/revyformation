@@ -1,0 +1,31 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - master  # Déclenche l'action sur les pushs vers la branche principale
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Vérifie le code sur le repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Configure la clé SSH pour se connecter à ton VPS
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+
+      # Met à jour le code sur le VPS
+      - name: Update code on VPS
+        run: |
+          ssh -o StrictHostKeyChecking=no root@147.79.118.50 "
+            cd /var/www/html/revyformation &&
+            git pull origin main &&
+            npm install &&
+            npm run build
+          "
